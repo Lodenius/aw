@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 h1 {
@@ -23,7 +24,8 @@ h3 {
   font-size: 2rem;
 }
 
-p, button {
+p,
+button {
   font-family: 'Judson';
 }
 
