@@ -12,19 +12,34 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #674b7c;
 }
 
 h1 {
   font-family: 'Archivo Black';
   font-size: 4rem;
+  color: #f47362;
 }
 
 h3 {
   font-family: 'Archivo Black';
   font-size: 2rem;
+  color: rgb(183, 183, 183);
 }
 
-p,
+form {
+  width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+label {
+  font-family: 'Judson';
+  color: rgb(183, 183, 183);
+}
+
 button {
   font-family: 'Judson';
 }
