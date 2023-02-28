@@ -35,6 +35,17 @@ function addParticipant(e) {
   participants.push(nameInput.value);
   nameInput.value = '';
   console.log(participants);
+  renderParticipantList();
+}
+
+function renderParticipantList() {
+  const participantListEl = document.getElementById('participants-list');
+  const participantList = participants
+    .map(participant => {
+      return `<p>${participant}</p>`;
+    })
+    .join(' ');
+  participantListEl.innerHTML = participantList;
 }
 
 // Event listeners
