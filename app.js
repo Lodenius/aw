@@ -1,8 +1,9 @@
 const activityBtn = document.getElementById('activity-btn');
-const categoryEl = document.getElementById('category');
+const registerBtn = document.getElementById('register-btn');
 const activityEl = document.getElementById('activity');
 
 let activities = [];
+let participants = [];
 
 // Fetch data from API
 async function fetchData() {
@@ -10,14 +11,14 @@ async function fetchData() {
     const res = await fetch('activities.json');
     const data = await res.json();
 
-    getCategory(data);
+    getActivity(data);
   } catch (error) {
     console.error(error);
   }
 }
 
-// Get random category
-function getCategory(data) {
+// Get random activity
+function getActivity(data) {
   data.forEach(activity => {
     activities.push(activity.name);
   });
@@ -27,5 +28,15 @@ function getCategory(data) {
   activityEl.textContent = randomActivity;
 }
 
+// Add participant to list
+function addParticipant(e) {
+  e.preventDefault();
+  const nameInput = document.getElementById('name');
+  participants.push(nameInput.value);
+  nameInput.value = '';
+  console.log(participants);
+}
+
 // Event listeners
 activityBtn.addEventListener('click', fetchData);
+registerBtn.addEventListener('click', addParticipant);
