@@ -1,9 +1,7 @@
 const activityBtn = document.getElementById('activity-btn');
-const categoryBtn = document.getElementById('category-btn');
 const categoryEl = document.getElementById('category');
 const activityEl = document.getElementById('activity');
 
-let categories = [];
 let activities = [];
 
 // Fetch data from API
@@ -12,10 +10,7 @@ async function fetchData() {
     const res = await fetch('activities.json');
     const data = await res.json();
 
-    console.log(data);
-
     getCategory(data);
-    // getActivity(data);
   } catch (error) {
     console.error(error);
   }
@@ -24,15 +19,13 @@ async function fetchData() {
 // Get random category
 function getCategory(data) {
   data.forEach(activity => {
-    categories.push(activity.categories);
-    console.log(activity.categories);
+    activities.push(activity.name);
   });
 
-  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+  const randomActivity = activities[Math.floor(Math.random() * activities.length)];
 
-  console.log(randomCategory);
-  categoryEl.textContent = randomCategory;
+  activityEl.textContent = randomActivity;
 }
 
 // Event listeners
-categoryBtn.addEventListener('click', fetchData);
+activityBtn.addEventListener('click', fetchData);
