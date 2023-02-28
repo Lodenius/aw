@@ -2,145 +2,145 @@
     {
         "name": "Curling",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Bowling",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Pool",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Movie",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Climbing",
         "location": "inside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "all year"
     },
     {
         "name": "Quiz",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Wine Tasting",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Softball",
         "location": "outside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "summer"
     },
     {
         "name": "Volleyball",
         "location": "outside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "summer"
     },
     {
         "name": "Soccer",
         "location": "outside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "summer"
     },
     {
         "name": "Ice skating",
         "location": "outside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "winter"
     },
     {
         "name": "Skiing",
         "location": "outside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "winter"
     },
     {
         "name": "Karaoke",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Boule",
         "location": "outside",
-        "categories": "all",
+        "for": "all",
         "season": "summer"
     },
     {
         "name": "Shuffle Board",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Cheese Tasting",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Cooking Class",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Padel",
         "location": "inside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "all year"
     },
     {
         "name": "Axe Throwing",
         "location": "outside",
-        "categories": "all",
+        "for": "all",
         "season": "summer"
     },
     {
         "name": "Escape Room",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Marshall Arts",
         "location": "inside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "all year"
     },
     {
         "name": "Yoga",
         "location": "inside",
-        "categories": "sporty",
+        "for": "sporty",
         "season": "all year"
     },
     {
         "name": "Pottery Class",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     },
     {
         "name": "Art Class",
         "location": "inside",
-        "categories": "all",
+        "for": "all",
         "season": "all year"
     }   
 ]
