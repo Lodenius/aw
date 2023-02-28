@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Judson&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +11,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  font-family: 'Archivo Black';
+  font-size: 4rem;
+}
+
+h3 {
+  font-family: 'Judson';
+}
+
+p, button {
+  font-family: 'Judson';
 }
 
 .generate-btn {
