@@ -13,33 +13,26 @@ async function fetchData() {
     const data = await res.json();
 
     console.log(data);
+
+    getCategory(data);
+    // getActivity(data);
   } catch (error) {
     console.error(error);
   }
 }
 
 // Get random category
-function getCategory() {
-  data.forEach(category => {
-    categories.push(category);
+function getCategory(data) {
+  data.forEach(activity => {
+    categories.push(activity.categories);
+    console.log(activity.categories);
   });
 
   const randomCategory = categories[Math.floor(Math.random() * categories.length)];
 
+  console.log(randomCategory);
   categoryEl.textContent = randomCategory;
 }
 
-// Get random activity
-function getActivity() {
-  data.forEach(activity => {
-    activities.push(activity);
-  });
-
-  const randomActivity = activities[Math.floor(Math.random() * activities.length)];
-
-  activityEl.textContent = randomActivity;
-}
-
 // Event listeners
-categoryBtn.addEventListener('click', getCategory);
-activityBtn.addEventListener('click', getActivity);
+categoryBtn.addEventListener('click', fetchData);
