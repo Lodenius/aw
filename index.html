@@ -8,30 +8,27 @@
     <title>ACTIVITY GENERATOR</title>
   </head>
   <body>
-    <h1>
-      ACTIVITY <br />
-      GENERATOR
-    </h1>
-
-    <h3 id="activity">YOUR ACTIVITY</h3>
-
-    <h4>Please select one of the options</h4>
-
-    <label for="inside">Indoors activity </label>
-    <input type="radio" id="inside" name="location" />
-
-    <label for="outside">Outdoors activity</label>
-    <input type="radio" id="outside" name="location" />
-
-    <button class="generate-btn" id="activity-btn">Randomize activity</button>
-
-    <form action="submit" id="form">
-      <input type="text" id="name" autocomplete="off" placeholder=" Name" required />
-      <button class="register-btn" id="register-btn">Commit</button>
-    </form>
-
-    <section class="participants-list" id="participants-list"></section>
-
+    <header>
+      <h1>ACTIVITY <br/> GENERATOR</h1>
+    </header>
+    <section class="section-right">
+      <h3 id="activity">YOUR ACTIVITY</h3>
+      <button class="generate-btn" id="activity-btn">Randomize activity</button>
+      <section class="location">
+        <label for="inside">Inside</label>
+        <input type="radio" id="inside" name="location" />
+        <label for="outside">Outside</label>
+        <input type="radio" id="outside" name="location" />
+      </section>
+      
+      <form action="submit" id="form">
+        <input type="text" id="name" autocomplete="off" placeholder=" Name" required />
+        <button class="register-btn" id="register-btn">Commit</button>
+      </form>
+      
+      <section class="participants-list" id="participants-list"></section>
+    
+    </section>
     <script src="app.js"></script>
   </body>
 </html>
