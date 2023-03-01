@@ -46,7 +46,6 @@ form {
 
 .register-btn {
   width: 12rem;
-
 }
 
 label {
@@ -63,4 +62,10 @@ button {
   width: 12rem;
   padding: 0.5rem;
   margin-bottom: 2rem;
+}
+
+.participants-list {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #fff;
 }
