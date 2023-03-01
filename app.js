@@ -33,9 +33,11 @@ function getActivity(data) {
   });
 
   if (checkboxInside.checked) {
+    activityEl.style.visibility = 'visible';
     activityEl.textContent =
       insideActivities[Math.floor(Math.random() * insideActivities.length)];
   } else if (checkboxOutside.checked) {
+    activityEl.style.visibility = 'visible';
     activityEl.textContent =
       outsideActivities[Math.floor(Math.random() * outsideActivities.length)];
   }
