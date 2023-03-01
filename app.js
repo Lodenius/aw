@@ -41,7 +41,7 @@ function addParticipant(e) {
 function renderParticipantList() {
   const participantListEl = document.getElementById('participants-list');
   const participantList = participants
-    .map(participant => {
+  .map(participant => {
       return `<p>${participant}</p>`;
     })
     .join(' ');
