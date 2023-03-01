@@ -29,6 +29,11 @@ h3 {
   margin-top: 2rem;
 }
 
+p {
+  font-family: 'Judson';
+  color: rgb(183, 183, 183);
+}
+
 form {
   width: 12rem;
   display: flex;
