@@ -6,6 +6,8 @@ const checkboxInside = document.getElementById('inside');
 const checkboxOutside = document.getElementById('outside');
 
 let participants = [];
+let insideActivities = [];
+let outsideActivities = [];
 
 // Fetch data from API
 async function fetchData() {
@@ -13,17 +15,14 @@ async function fetchData() {
     const res = await fetch('activities.json');
     const data = await res.json();
 
-    getActivity(data);
+    sortByCategory(data);
   } catch (error) {
     console.error(error);
   }
 }
 
-// Get random activity
-function getActivity(data) {
-  let insideActivities = [];
-  let outsideActivities = [];
-
+// Sort activities by category
+function sortByCategory(data) {
   data.forEach(activity => {
     if (activity.location === 'inside') {
       insideActivities.push(activity.name);
@@ -31,11 +30,17 @@ function getActivity(data) {
       outsideActivities.push(activity.name);
     }
   });
+  getActivity();
+}
 
+// Get random activity
+function getActivity() {
   if (checkboxInside.checked) {
+    activityEl.style.visibility = 'visible';
     activityEl.textContent =
       insideActivities[Math.floor(Math.random() * insideActivities.length)];
   } else if (checkboxOutside.checked) {
+    activityEl.style.visibility = 'visible';
     activityEl.textContent =
       outsideActivities[Math.floor(Math.random() * outsideActivities.length)];
   }
