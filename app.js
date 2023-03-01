@@ -2,6 +2,9 @@ const activityBtn = document.getElementById('activity-btn');
 const registerBtn = document.getElementById('register-btn');
 const activityEl = document.getElementById('activity');
 
+const checkboxInside = document.getElementById('inside');
+const checkboxOutside = document.getElementById('outside');
+
 let participants = [];
 
 // Fetch data from API
@@ -18,25 +21,37 @@ async function fetchData() {
 
 // Get random activity
 function getActivity(data) {
-  let activities = [];
+  let insideActivities = [];
+  let outsideActivities = [];
 
   data.forEach(activity => {
-    activities.push(activity.name);
+    if (activity.location === 'inside') {
+      insideActivities.push(activity.name);
+    } else {
+      outsideActivities.push(activity.name);
+    }
   });
 
-  const randomActivity = activities[Math.floor(Math.random() * activities.length)];
-
-  activityEl.textContent = randomActivity;
+  if (checkboxInside.checked) {
+    activityEl.textContent =
+      insideActivities[Math.floor(Math.random() * insideActivities.length)];
+  } else if (checkboxOutside.checked) {
+    activityEl.textContent =
+      outsideActivities[Math.floor(Math.random() * outsideActivities.length)];
+  }
 }
 
 // Add participant to list
 function addParticipant(e) {
   e.preventDefault();
   const nameInput = document.getElementById('name');
-  participants.push(nameInput.value);
-  nameInput.value = '';
-  console.log(participants);
-  renderParticipantList();
+
+  if (nameInput.value) {
+    participants.push(nameInput.value);
+    nameInput.value = '';
+    console.log(participants);
+    renderParticipantList();
+  }
 }
 
 // Render participants to UI
